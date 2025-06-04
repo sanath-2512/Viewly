@@ -5,6 +5,7 @@ import TrendingMovies from './TrendingMovies';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { useRef } from "react";
+import logo from "./logo1.png"
 const Home = () => {
   
   const [trendm,setTrendm] = useState([])
@@ -49,13 +50,12 @@ const Home = () => {
     <div>
 
       <div className='nav'>
-            <div>Viewly</div>
+      <Link to="/"><div className="logo"><img src={logo} alt="yo" /></div></Link>
             <div className='navc'>
             <p><Link to="/">Home</Link></p>
            <p> <Link to="/search">Search</Link></p>
             <p><Link to="/watchlist">Watchlist</Link></p>
-            <p><Link to="/about">About</Link></p>
-            <p><Link to="/contact">Contact</Link></p>
+            <p><Link to="/about">About Us</Link></p>
             </div>
       </div> 
       {/* // above this is my nav section*/}
@@ -68,7 +68,7 @@ const Home = () => {
                 </video>
             </div>
             <div className='videocontent'>
-                <h1>Discover. <span> Search.</span> Watch.</h1>
+                <h1>Discover. <span><Link to="/search"> Search.</Link></span> Watch.</h1>
                 <h2>Explore trending, top-rated, and hidden gems in one search.</h2>
                 <button onClick={scrollToTrend}>Start Exploring</button>
             </div>

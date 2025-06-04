@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Search from './components/Search';
 import Watchlist from './components/Watchlist';
 import About from './components/About';
-import Contact from './components/Contact';
 import Moviedetails from './components/Moviedetails';
 import Trailer from './components/Trailer';
 function App() {
@@ -31,7 +30,6 @@ function App() {
       <Route path="/search" element={<Search />}/>
       <Route path="/watchlist" element={<Watchlist watchlist ={watchlist}/>}/>
       <Route path="/about" element={<About />}/>
-      <Route path="/contact" element={<Contact />}/>
       <Route path="/movie/:id" element={<Moviedetails handlewatchlist={handlewatchlist} removefromwatchlist={removefromwatchlist} watchlist ={watchlist} />} />
       <Route path="/movie/:id/:key" element={<Trailer />} />
     </Routes>

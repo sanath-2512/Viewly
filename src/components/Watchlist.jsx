@@ -2,17 +2,17 @@ import React from 'react'
 import "./Home.css"
 import { Link } from 'react-router-dom'
 import TrendingMovies from './TrendingMovies'
+import logo from "./logo1.png"
 const Watchlist = ({watchlist}) => {
   return (
     <div>
             <div className='nav'>
-                <div>Viewly</div>
+            <Link to="/"><div className="logo"><img src={logo} alt="yo" /></div></Link>
                 <div className='navc'>
                     <p><Link to="/">Home</Link></p>
                     <p> <Link to="/search">Search</Link></p>
                     <p><Link to="/watchlist">Watchlist</Link></p>
-                    <p><Link to="/about">About</Link></p>
-                    <p><Link to="/contact">Contact</Link></p>
+                    <p><Link to="/about">About Us</Link></p>
                 </div>
             </div> 
             <div className='waa'>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import "./Home.css"
+import logo from "./logo1.png"
 const Moviedetails = ({handlewatchlist,removefromwatchlist,watchlist}) => {
     const {id} = useParams();
     const [he,sethe] = useState(null)
@@ -28,8 +29,7 @@ const Moviedetails = ({handlewatchlist,removefromwatchlist,watchlist}) => {
       backgroundImage: `url(https://image.tmdb.org/t/p/original/${he.backdrop_path})`, 
     }}
   >
-    <div className='hu'>Viewly
-    
+    <div className='hu'><Link to="/"><img src={logo} alt="yo" /></Link>
     </div>
     
 

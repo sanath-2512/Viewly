@@ -3,6 +3,7 @@ import TrendingMovies from './TrendingMovies'
 import "./Home.css"
 import searchposter from "./searchposter.png"
 import { Link } from 'react-router-dom'
+import logo from "./logo1.png"
 const Search = () => {
     const[search,setsearch] = useState("")
     const[hee,sethee] = useState([])
@@ -20,13 +21,12 @@ const Search = () => {
   return (
     <div>
      <div className='nav'>
-            <div>Viewly</div>
+     <Link to="/"><div className="logo"><img src={logo} alt="yo" /></div></Link>
             <div className='navc'>
             <p><Link to="/">Home</Link></p>
            <p> <Link to="/search">Search</Link></p>
             <p><Link to="/watchlist">Watchlist</Link></p>
-            <p><Link to="/about">About</Link></p>
-            <p><Link to="/contact">Contact</Link></p>
+            <p><Link to="/about">About Us</Link></p>
             </div>
       </div>
       <div className='heeee' style={{ 
@@ -37,21 +37,22 @@ const Search = () => {
       borderRadius: '0.5vw',
       backgroundSize: "cover",
       backgroundPosition:"center",
-      backgroundRepeat: "no-repeat"
+      backgroundRepeat: "no-repeat",
+      marginBottom: "0.5vw"
  
     }}>
             <input type="text" placeholder='Search Movies' onChange={hell}/> 
       </div>
-      <div>{search}</div>
       
       {search === "" || hee.length === 0 ? <p className='ye'>Welcome! Start typing to explore movies.</p> : (<div className="trendmoviecard">
     {hee.map((movie) => (
       <Link to={`/movie/${movie.id}`} key={movie.id}>
         <TrendingMovies poster_path={movie.poster_path} title={movie.title} />
       </Link>
-    ))}
+    ))}  
   </div>
 )}
+    
         
     </div>
   )
