@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TrendingMovies from './TrendingMovies'
 import "./Home.css"
+import searchposter from "./searchposter.png"
 import { Link } from 'react-router-dom'
 const Search = () => {
     const[search,setsearch] = useState("")
@@ -28,16 +29,30 @@ const Search = () => {
             <p><Link to="/contact">Contact</Link></p>
             </div>
       </div>
-      <div className='heeee'>
+      <div className='heeee' style={{ 
+      backgroundImage: `url(${searchposter})`, 
+      width: "100%", 
+      height: "20vw", 
+    
+      borderRadius: '0.5vw',
+      backgroundSize: "cover",
+      backgroundPosition:"center",
+      backgroundRepeat: "no-repeat"
+ 
+    }}>
             <input type="text" placeholder='Search Movies' onChange={hell}/> 
       </div>
       <div>{search}</div>
-      <div className="trendmoviecard">
-        {search == "" || hee.length === 0 ? <div></div> : hee.map((movie) => {
-            return <Link to={`/movie/${movie.id}`} ><TrendingMovies poster_path={movie.poster_path} title={movie.title} /></Link>
-        })}
+      
+      {search === "" || hee.length === 0 ? <p className='ye'>Welcome! Start typing to explore movies.</p> : (<div className="trendmoviecard">
+    {hee.map((movie) => (
+      <Link to={`/movie/${movie.id}`} key={movie.id}>
+        <TrendingMovies poster_path={movie.poster_path} title={movie.title} />
+      </Link>
+    ))}
+  </div>
+)}
         
-    </div>
     </div>
   )
 }

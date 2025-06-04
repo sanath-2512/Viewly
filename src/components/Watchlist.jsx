@@ -1,7 +1,8 @@
 import React from 'react'
 import "./Home.css"
 import { Link } from 'react-router-dom'
-const Watchlist = () => {
+import TrendingMovies from './TrendingMovies'
+const Watchlist = ({watchlist}) => {
   return (
     <div>
             <div className='nav'>
@@ -14,6 +15,14 @@ const Watchlist = () => {
                     <p><Link to="/contact">Contact</Link></p>
                 </div>
             </div> 
+            <div className='waa'>
+            <div className="trendmoviecard">
+        {watchlist.map((movie) => {
+            return <Link to={`/movie/${movie.id}`} ><TrendingMovies poster_path={movie.poster_path} title={movie.title} /></Link>
+        })}
+    </div>
+    </div>
+
     </div>
   )
 }

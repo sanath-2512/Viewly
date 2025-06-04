@@ -81,23 +81,29 @@ html,body {
     display: flex;
     flex-wrap: wrap;
     gap: 3vw;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 2vw;
     overflow-x: auto;
-    border-bottom: #FFFFFF solid 0.1vw;
+    /* border-bottom: #FFFFFF solid 0.01vw; */
     padding-bottom: 2vw;
-
 }
 .helo{
     
     margin-top: 0vw;
-    margin-top: 0vw;
-    margin: 0.75vw;
-    width: calc(100vw - 1.5vw); 
-    height: calc(100vh - 1.5vw);
+    margin: 0.5vw;
+    width: calc(100vw - 1vw); 
+    height: calc(100vh - 1vw);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 0.25vw;
+}
+.sanath{
+    width: 100vw;
+    height: 45vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .hu{
     color: white;
@@ -113,7 +119,7 @@ html,body {
 }
 .hetitle{
     font-size: 5vw;
-    margin-top: 23vh;
+    margin-top: 20vh;
     margin-left: 2vw;
     font-weight: 800;
 }
@@ -134,6 +140,18 @@ html,body {
     border-radius: 1vw;
     
 }
+.overview button{
+    padding: 0.8vw;
+    background-color: white;
+    /* width: 12vw;
+    height: 3vw; */
+    color: Black;
+    border-radius: 1vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    font-family: 'Major Mono Display', monospace;
+}
 .trailer{
     width: 100vw;
     height: 100vh;
@@ -152,8 +170,26 @@ html,body {
 .heeee{
     display: flex;
     justify-content: center;
+    margin-top: 2.3vw;
+}
+.heeee input {
     margin-top: 10vw;
 }
+.ye{
+    margin-top: 10vw;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.heart{
+    font-size: 2vw;
+    
+}
+
+.waa{
+    margin-top: 2vw;
+}
+
 
 
 

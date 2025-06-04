@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { useRef } from "react";
 const Home = () => {
-    
+  
   const [trendm,setTrendm] = useState([])
   const [upcoming,setupcoming] = useState([])
   const [toprated,settoprated] = useState([])
@@ -18,6 +18,7 @@ const Home = () => {
     trendRef.current.scrollIntoView({ behavior: 'smooth' });
   } 
 //   chatgpt ref
+  
   async function trending (){
     
     const data = await fetch(`https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=e970e6cff0e95f81d9a04f1c5aca66bc`)

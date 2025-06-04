@@ -1,5 +1,6 @@
 import React from 'react'
-
+import normalheart from "./normal_heart.png"
+import "./Home.css"
 const TrendingMovies = ({title,poster_path}) => {
   return (
     <div 
