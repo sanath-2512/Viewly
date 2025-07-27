@@ -44,7 +44,7 @@ const Search = () => {
             <input type="text" placeholder='Search Movies' onChange={hell}/> 
       </div>
       
-      {search === "" || hee.length === 0 ? <p className='ye'>Welcome! Start typing to explore movies.</p> : (<div className="trendmoviecard">
+      {search === "" || hee.length === 0 ? <div className='ye'>Welcome! Start typing to explore movies.</div> : (<div className="trendmoviecard">
     {hee.map((movie) => (
       <Link to={`/movie/${movie.id}`} key={movie.id}>
         <TrendingMovies poster_path={movie.poster_path} title={movie.title} />

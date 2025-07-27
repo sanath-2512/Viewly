@@ -117,6 +117,18 @@ const Home = () => {
             return <Link to={`/movie/${movie.id}`} ><TrendingMovies poster_path={movie.poster_path} title={movie.title} /></Link>
         })}
     </div>
+    <div className="footer">
+  <p>© {new Date().getFullYear()} Viewly • Built by Sanath P Waraikar</p>
+  <div className="footer-links">
+    <a href="mailto:sanathwaraikar@gmail.com">Contact Me</a>
+    <a href="https://github.com/sanath-2512" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/sanath-waraikar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://twitter.com/your_twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+  </div>
+</div>
+
+    
     </div>
   )
 }
