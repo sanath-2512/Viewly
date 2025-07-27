@@ -17,14 +17,8 @@ const Watchlist = ({watchlist}) => {
                 </div>
             </div> 
             
-                
-          
-            
-       
-      
-             
-        
-        {watchlist.length == 0 ? <div>
+        {watchlist.length == 0 ? 
+        <div>
            <div className='video'> 
             <video className='herovideo' loop autoPlay muted playsInline>
                     <source src={wvideo} type="video/mp4" />
@@ -35,9 +29,15 @@ const Watchlist = ({watchlist}) => {
             Cue the montage — it’s time to add some blockbusters.
             </div>
             </div>
-      :  watchlist.map((movie) => {
-          return <div className="trendmoviecard"><Link to={`/movie/${movie.id}`} ><TrendingMovies poster_path={movie.poster_path} title={movie.title} /></Link></div>
-      })} 
+        
+      :
+      <div className="trendmoviecard"> 
+       {watchlist.map((movie) => {
+          return <Link to={`/movie/${movie.id}`} ><TrendingMovies poster_path={movie.poster_path} title={movie.title} /></Link>
+      })}
+      </div>
+
+      } 
    
     
 
